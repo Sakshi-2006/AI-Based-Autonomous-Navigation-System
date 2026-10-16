@@ -1,144 +1,118 @@
 # AI-Based Autonomous Navigation System
 
-An interactive AI-driven navigation simulator built with React, TypeScript, and Vite. This project visualizes how autonomous agents plan paths in a grid environment using classic search algorithms such as A*, Dijkstra, and BFS.
+An interactive AI-driven navigation simulator implemented with React, TypeScript, and Vite. This project demonstrates grid-based autonomous navigation and path-planning algorithms with a live, browser-based visualization and controls.
 
-The application lets users configure the environment, add obstacles, choose an algorithm, and watch the robot explore and navigate to a goal in real time.
+Live demo
 
-## Features
+- Hosted demo: https://ai-autonomous-naviga-pim9.bolt.host
 
-- Interactive grid-based simulation environment
-- Start and goal placement with obstacle editing tools
-- Algorithm selection for path planning
-- A* search, Dijkstra, and BFS support
-- Diagonal movement toggle
-- Animation speed controls
+Table of contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Project structure](#project-structure)
+- [Getting started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Run locally](#run-locally)
+  - [Build for production](#build-for-production)
+- [Algorithms](#algorithms)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+Overview
+
+This repository provides a modular, type-safe implementation of grid-based pathfinding and an interactive simulation used for education, research, and demonstrations. Users can configure maps, place obstacles, select algorithms, and watch how agents explore and compute paths to a goal.
+
+Features
+
+- Interactive grid-based simulation with obstacle editing
+- Start and goal placement
+- Algorithm selection: A*, Dijkstra, BFS
+- Diagonal movement toggle and animation speed controls
 - Maze and random map generation presets
-- Real-time statistics for explored nodes, path length, and runtime behavior
-- Responsive UI for desktop and mobile layouts
+- Real-time statistics: explored nodes, path length, runtime
+- Responsive UI built with TypeScript and modern tooling
 
-## Tech Stack
+Tech stack
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- HTML5 Canvas-based simulation rendering
-- Lucide React icons
+- Language: TypeScript (primary)
+- Frontend: React + Vite
+- Styling: Tailwind CSS
+- Rendering: HTML5 Canvas for simulation visualization
+- Icons: Lucide React (or similar)
 
-## Project Structure
+Project structure (high level)
 
-- src/App.tsx: Main application layout and simulation orchestration
-- src/components: UI components for the simulator, controls, workflow, architecture, and content sections
-- src/lib: Logic helpers and simulation utilities
-- src/types: Shared TypeScript types
-- src/index.css: Application styling
+- README.md — project overview and instructions
+- package.json — project scripts and dependencies
+- src/ — core TypeScript source (components, simulation logic, helpers)
+- src/components — UI components and controls
+- src/lib — simulation and algorithm implementations
+- src/types — shared TypeScript types
+- public/ — static assets
 
-## Simulation Workflow
+Getting started
 
-1. Set the map size and environment preset.
-2. Place obstacles, start point, and goal point.
-3. Select a navigation algorithm.
-4. Run the simulation to visualize exploration and pathfinding.
-5. Review path efficiency and algorithm metrics.
-
-## Getting Started
-
-### Prerequisites
+Prerequisites
 
 - Node.js 18 or newer
-- npm
+- npm (or yarn)
 
-### Installation
-
-Clone the repository:
+Install
 
 ```bash
 git clone https://github.com/Sakshi-2006/AI-Based-Autonomous-Navigation-System.git
 cd AI-Based-Autonomous-Navigation-System
-```
-
-Install dependencies:
-
-```bash
 npm install
 ```
 
-### Run the app locally
+Run locally
 
 ```bash
 npm run dev
 ```
 
-The development server will start and provide a local URL for the app.
+Open the local URL printed by Vite (commonly http://localhost:5173) to view the app.
 
-### Build for production
+Build for production
 
 ```bash
 npm run build
 ```
 
-### Linting
+Algorithms
 
-```bash
-npm run lint
-```
+- A*: Heuristic-driven search for shortest path using an admissible heuristic.
+- Dijkstra: Uniform-cost search for shortest path on weighted grids.
+- BFS: Breadth-first search for shortest path on unweighted grids.
 
-### Type checking
+Usage
 
-```bash
-npm run typecheck
-```
+- Use the UI to configure grid size and presets, place the start and goal, add or remove obstacles, and select an algorithm.
+- Start the simulation to watch the exploration and the path being constructed. Use speed controls to slow or accelerate the visualization.
 
-## Available Algorithms
+Testing and quality
 
-### A*
+- Run unit tests (if configured) with `npm test`.
+- Run linting and type checks with `npm run lint` and `npm run typecheck`.
 
-A heuristic-based pathfinding algorithm that efficiently finds the shortest path while prioritizing promising nodes.
+Contributing
 
-### Dijkstra
-
-A shortest-path algorithm that explores nodes by cumulative cost and is useful for weighted pathfinding.
-
-### BFS
-
-A breadth-first traversal algorithm that finds the shortest path in an unweighted grid.
-
-## Use Cases
-
-This project is suitable for demonstrating:
-
-- Autonomous navigation concepts
-- Search algorithm comparison
-- Grid-based path planning
-- AI and robotics education
-- Portfolio and research visualization
-
-## Screenshots
-
-The interface includes:
-
-- a top navigation bar
-- a live simulation area
-- a control panel for algorithm and grid settings
-- dashboard metrics for performance analysis
-- educational sections explaining workflow, architecture, and future ideas
-
-## Contributing
-
-Contributions are welcome. To contribute:
+Contributions are welcome. Suggested workflow:
 
 1. Fork the repository.
-2. Create a feature branch.
-3. Make your changes.
-4. Run validation checks.
-5. Open a pull request with a clear description of the update.
+2. Create a feature branch: `git checkout -b feature/description`.
+3. Implement changes and add tests where appropriate.
+4. Run linting and tests locally.
+5. Open a pull request with a clear description of the change.
 
-## License
+License
 
-This project does not currently include a license file. If you plan to distribute or reuse the project publicly, add an appropriate open-source license such as MIT and reference it here.
+This repository does not include a LICENSE file. If you intend to publish or reuse the project publicly, add an appropriate open-source license (for example, MIT) and reference it here.
 
-## Contact
+Contact
 
-For questions or collaboration, visit the repository:
-
-https://github.com/Sakshi-2006/AI-Based-Autonomous-Navigation-System
+For questions or collaboration, open an issue on the repository or visit the maintainer profile: https://github.com/Sakshi-2006
